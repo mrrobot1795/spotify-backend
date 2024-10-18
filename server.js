@@ -12,8 +12,19 @@ connectDB();
 
 const app = express();
 
+const corsOptions = {
+  origin: [
+    "https://spotify-frontend-olive.vercel.app",
+    "http://localhost:3000"
+  ],
+  credentials: true,
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+};
+
+app.use(cors(corsOptions));
+
 app.use(json());
-app.use(cors());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/songs', songsRoutes);
