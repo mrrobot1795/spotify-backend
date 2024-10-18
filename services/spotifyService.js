@@ -1,5 +1,3 @@
-// services/spotifyService.js
-
 import axios from "axios";
 import { stringify } from "qs";
 
