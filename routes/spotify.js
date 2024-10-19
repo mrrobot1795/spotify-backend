@@ -11,7 +11,7 @@ import {
 } from "../controllers/spotifyController.js";
 import authMiddleware from "../middleware/authMiddleware.js";
 import SpotifyUser from "../models/User.js";
-import { config } from 'dotenv';
+import { config } from "dotenv";
 
 config();
 
@@ -85,8 +85,9 @@ router.get("/callback", async (req, res) => {
     );
     await user.save();
 
+    // Redirect to your deployed frontend address
     res.redirect(
-      `http://localhost:3000/?spotifyAccessToken=${response.data.access_token}`
+      `https://spotify-frontend-olive.vercel.app/?spotifyAccessToken=${response.data.access_token}`
     );
   } catch (error) {
     console.error(
