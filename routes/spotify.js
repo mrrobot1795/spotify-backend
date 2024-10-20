@@ -87,7 +87,7 @@ router.get("/callback", async (req, res) => {
 
     // Redirect to your deployed frontend address
     res.redirect(
-      `https://spotify-frontend-olive.vercel.app/?spotifyAccessToken=${response.data.access_token}`
+      `https://spotify-mrrobot.vercel.app/?spotifyAccessToken=${response.data.access_token}`
     );
   } catch (error) {
     console.error(

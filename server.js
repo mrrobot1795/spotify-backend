@@ -14,7 +14,7 @@ const app = express();
 
 const corsOptions = {
   origin: [
-    "https://spotify-frontend-olive.vercel.app",
+    "https://spotify-mrrobot.vercel.app",
     "http://localhost:3000"
   ],
   credentials: true,
